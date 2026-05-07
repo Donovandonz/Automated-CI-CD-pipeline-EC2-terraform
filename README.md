@@ -57,3 +57,45 @@ The entire infrastructure is defined as code, and the deployment is fully automa
 - 1. Clone the repo
 - 2. Add your secrets (Docker Hub token, AWS keys)
 - 3. Push to `main` – the pipeline will deploy automatically
+ 
+---
+
+# 🚀 PowerShell Command to Run & Deploy 
+1.
+```
+cd C:\devops-project
+```
+2.
+```
+echo "" >> README.md
+git add README.md
+git commit -m "trigger new deployment"
+git push
+```
+
+---
+
+# 🐳 Test the Docker container locally (without deploying to AWS)
+
+```
+cd C:\devops-project
+docker build -t my-first-container .
+docker run -p 5000:5000 my-first-container
+```
+---
+
+# 🏗️ Run Terraform locally (to preview or apply infrastructure)
+
+```
+cd C:\devops-project\terraform
+terraform init
+terraform plan
+terraform apply -auto-approve
+```
+To destroy everything:
+```
+terraform destroy -auto-approve
+```
+
+
+
