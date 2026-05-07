@@ -39,7 +39,7 @@ resource "aws_security_group" "web_sg" {
 
 resource "aws_instance" "flask_app" {
   ami           = "ami-0c7217cdde317cfec"
-  instance_type = "t2.micro"
+  instance_type = "t3.micro"
 
   security_groups = [aws_security_group.web_sg.name]
 
