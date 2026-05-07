@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 resource "aws_security_group" "web_sg" {
-  name        = "flask-web-sg-donovan"
+  name_prefix = "flask-web-sg-" 
   description = "Allow HTTP and SSH"
 
   ingress {
