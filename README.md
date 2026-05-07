@@ -1,0 +1,45 @@
+# CI/CD Pipeline: Deploy a Containerized Web App to AWS EC2
+
+---
+
+## 📌 Project Overview
+
+This project demonstrates an **end‑to‑end DevOps pipeline** that automatically deploys a Python Flask web application to an AWS EC2 instance. Every time code is pushed to the `main` branch, GitHub Actions:
+
+- Builds a Docker image of the app
+- Pushes the image to Docker Hub
+- Provisions an EC2 instance and a security group using **Terraform**
+- Deploys the container and makes the app publicly accessible
+
+The entire infrastructure is defined as code, and the deployment is fully automated – essential skills for a Cloud DevOps Engineer.
+
+---
+
+## 🛠️ Technologies & Tools
+
+| Category       | Tools                                                                 |
+|----------------|-----------------------------------------------------------------------|
+| **Cloud**      | AWS (EC2, Security Groups, IAM, Free Tier)                            |
+| **IaC**        | Terraform                                                             |
+| **Container**  | Docker, Docker Hub                                                    |
+| **CI/CD**      | GitHub Actions                                                        |
+| **Language**   | Python 3.9 + Flask                                                    |
+| **Version Ctrl**| Git                                                                  |
+
+---
+
+## 🏗️ Architecture Diagram
+
+```text
+[Git Push] → [GitHub Actions] → [Docker Build & Push] → [Docker Hub]
+                    ↓
+            [Terraform Apply]
+                    ↓
+    [AWS EC2 Instance + Security Group]
+                    ↓
+         [Container runs on port 80]
+                    ↓
+            [Public IP → Browser]
+```
+
+<img width="1907" height="568" alt="Screenshot 2026-05-07 150109" src="https://github.com/user-attachments/assets/1bc316c8-dff3-415b-9a80-3acb96881268" />
