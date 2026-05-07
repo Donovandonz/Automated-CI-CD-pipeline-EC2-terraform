@@ -43,3 +43,17 @@ The entire infrastructure is defined as code, and the deployment is fully automa
 ```
 
 <img width="1907" height="568" alt="Screenshot 2026-05-07 150109" src="https://github.com/user-attachments/assets/1bc316c8-dff3-415b-9a80-3acb96881268" />
+
+
+---
+
+## 🚀 Live Demo
+
+- The app was successfully deployed to AWS EC2 using Terraform and GitHub Actions.  
+*(Instance terminated to avoid charges – can be redeployed anytime)*
+
+## 🧪 How to Redeploy
+
+- 1. Clone the repo
+- 2. Add your secrets (Docker Hub token, AWS keys)
+- 3. Push to `main` – the pipeline will deploy automatically
